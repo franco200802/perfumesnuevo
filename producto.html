@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emporio Armani - Detalle</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="producto.css">
+</head>
+<body>
+
+<!-- NAVBAR copiado de index.html -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mi-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-3" href="#">Ritta-et-Compagnie</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#perfumes">Perfumes</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <img src="strongerwty (1).png" alt="Emporio Armani Stronger" class="img-fluid producto-img">
+    </div>
+    <div class="col-md-6">
+      <h2 class="producto-titulo">Emporio Armani Stronger with You Intensely</h2>
+      <p class="text-muted">Eau de Parfum 100ml · Para hombre</p>
+      <p class="fs-4 fw-bold">$150</p>
+      <p class="producto-descripcion">
+        Fragancia intensa y sofisticada con notas de vainilla, ámbar y cuero. Ideal para hombres seguros, elegantes y modernos.
+      </p>
+      <button id="finalizarCompraBtn" class="btn btn-dark btn-lg mt-3">Finalizar Compra</button>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-white mt-5 py-4">
+  <div class="container text-center">
+    <p class="mb-1">&copy; 2025 Ritta et Compagnie. Todos los derechos reservados.</p>
+    <p class="mb-0">Seguinos en redes:
+      <a href="#" class="text-white ms-2 text-decoration-none">Instagram</a> |
+      <a href="#" class="text-white ms-2 text-decoration-none">Facebook</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Toast -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="compraToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+       Articulo cargado al carrito con exito finalizar tu compra en el apartado "Contacto".
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const finalizarBtn = document.getElementById('finalizarCompraBtn');
+  const toastElement = document.getElementById('compraToast');
+  const toast = new bootstrap.Toast(toastElement);
+
+  finalizarBtn.addEventListener('click', () => {
+    toast.show();
+  });
+</script>
+</body>
+</html>
